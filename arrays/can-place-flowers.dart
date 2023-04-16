@@ -1,3 +1,4 @@
+import '../execute_time.dart';
 /*
 You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 
@@ -22,15 +23,17 @@ Các trường hợp biên
  */
 
 void main() {
-  print(Solution().canPlaceFlowers2([1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 10)); //true
-  print(Solution().canPlaceFlowers2([1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 100)); //false
-  print(Solution().canPlaceFlowers2([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1)); //false
-  print(Solution().canPlaceFlowers2([1, 0, 0, 0, 1], 1)); //true
-  print(Solution().canPlaceFlowers2([1, 0, 0, 0, 1], 2)); //false
-  print(Solution().canPlaceFlowers2([1], 2)); //false
-  print(Solution().canPlaceFlowers2([0], 0)); //true
-  print(Solution().canPlaceFlowers2([0], 1)); //true
-  print(Solution().canPlaceFlowers2([0], 2)); //false
+  measureExecutionTime(() {
+    print(Solution().canPlaceFlowers2([1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 10)); //true
+    print(Solution().canPlaceFlowers2([1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 100)); //false
+    print(Solution().canPlaceFlowers2([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1)); //false
+    print(Solution().canPlaceFlowers2([1, 0, 0, 0, 1], 1)); //true
+    print(Solution().canPlaceFlowers2([1, 0, 0, 0, 1], 2)); //false
+    print(Solution().canPlaceFlowers2([1], 2)); //false
+    print(Solution().canPlaceFlowers2([0], 0)); //true
+    print(Solution().canPlaceFlowers2([0], 1)); //true
+    print(Solution().canPlaceFlowers2([0], 2)); //false
+  });
 }
 
 class Solution {
