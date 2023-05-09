@@ -70,6 +70,10 @@ class Solution {
     'M': 1000,
   };
 
+  /*
+    Vì số sau sẽ luôn nhỏ hơn số trước
+   */
+  
   int romanToInt(String s) {
     int sayi = 0;
     int oncekiDeger = 0;
